@@ -66,6 +66,35 @@ class UserRequest extends Request
 
            ];
        }
+
+        elseif ( $currentRoute == 'login') {
+           $rules = [
+           
+             'email' => [
+                'required',
+                'email',
+                'exists:users',
+            
+
+             ],
+             'password' => [
+                'required',
+                //'exists:users',                 
+
+             ],
+
+              'remember_me' => [
+                'in:true',                   
+
+             ],
+
+
+
+            
+
+           ];
+       }
+
        return $rules;
     }
 
@@ -91,11 +120,15 @@ class UserRequest extends Request
         return [
             'username.unique'            => Lang::get('auth.username_error_unique'),
             'username.regex'            => Lang::get('auth.username_error_regex'),
-            'email.unique'               => Lang::get('auth.email_error_unique'),                   
+            'email.unique'               => Lang::get('auth.email_error_unique'), 
+            'email.exists'               => Lang::get('auth.email_error_exists'),
+            'password.exists'            => Lang::get('auth.password_error_exists'),                                 
             'accept_disclaimer.required' => Lang::get('auth.accept_disclaimer_error'),
             'accept_disclaimer.in'       => Lang::get('auth.accept_disclaimer_error'),
         ];
 
 
     }
+
+
 }

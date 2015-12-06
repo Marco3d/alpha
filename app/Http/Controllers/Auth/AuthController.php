@@ -37,6 +37,7 @@ class AuthController extends Controller
     public function __construct()
     {
         $this->middleware('guest', ['except' => 'getLogout']);
+        $this->middleware('auth.strict', ['only' => 'getLogout']);
     }
 
     /**
@@ -87,4 +88,39 @@ class AuthController extends Controller
        
         
      }
+
+      protected function getLogout()
+     {
+        Auth::logout();
+        return Redirect::route('home')->with('alert.success', Lang::get('auth.logout_success_alert'));
+       
+       
+        
+     }
+
+
+      protected function getLogin()
+    {
+        
+        $title = Lang::get('auth.login_browser_title');
+        return View::make('auth.login', compact('title'));
+    }
+
+     protected function postLogin(UserRequest $request)
+     {
+        if (Auth::attempt($request->only('email','password'), $request->has('remember_me'))) 
+        
+            return Redirect::intended();
+
+            return Redirect::route('login')
+            ->withInput($request->only('email','remember_me'))
+            ->withErrors([
+                    'email' =>Lang::get('auth.email_error_login'),
+                ]);
+        
+       
+        
+     }
+
+
 }

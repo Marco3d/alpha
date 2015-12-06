@@ -13,6 +13,7 @@ return [
     |
     */
         'signup_browser_title'                    => 'Crea tu cuenta',
+        'login_browser_title'                     => 'Ingresa a tu cuenta',
 
         'signup_name'                             => 'Nombre',
         'signup_name_placeholder'                 => 'Ingresa tu  nombre',
@@ -31,17 +32,23 @@ return [
 
         'signup_accept_disclaimer'                 => 'He leido,entendido y aceptado los <a href=":tos_url" target ="_blank">Términos y condiciones de uso</a> 
                                                        y las <a href=":privacy_url" target ="_blank">Politicas de privacidad </a>  de :app_name' ,
-            
+        'login_remember_me'                        => 'Mantener conectado' ,
 
-         'signup_btn'                              => 'Crear mi cuenta',  
-         'login_call_to_action'                   => '¿Ya tienes una cuenta? Ingresa aquí.' ,  
+         'signup_btn'                              => 'Crear mi cuenta', 
+         'login_btn'                               =>  'Ingresar a mi cuenta', 
+         'login_call_to_action'                    => '¿Ya tienes una cuenta? Ingresa aquí.' ,  
+         'signup_call_to_action'                   => '¿No tienes una cuenta? Crea una aquí.' ,  
 
          'accept_disclaimer_error'                 => 'Debes aceptar los términos de uso y las politicas de privacidad',  
          'username_error_unique'                   => 'El nombre de usuario ya existe',
          'email_error_unique'                      => 'El correo ya está registrado en nuestra base de datos',
-         'username_error_regex'                   => 'Solo puedes usar minúsculas,números,guión bajo,sin tildes ni ñ.',
+         'email_error_exists'                      => 'Este correo no se encuentra registrado',
+         'email_error_login'                       => 'Los datos de acceso no son válidos',
+         'password_error_exists'                   => 'La contraseña no corresponde al usuario',
+         'username_error_regex'                    => 'Solo puedes usar minúsculas,números,guión bajo,sin tildes ni ñ.',
 
          'signup_success_alert'                    => 'Se ha creado correctamente tu cuenta. Bienvenido!', 
+         'logout_success_alert'                    => 'Has salido correctamente del sistema', 
 
         'failed'                                   => 'Estas credenciales no coinciden con nuestros registros.',
         'throttle'                                 => 'Demasiados intentos de acceso. Por favor intente nuevamente en :seconds segundos.',

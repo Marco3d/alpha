@@ -28,7 +28,7 @@ Route::get('auth/login', [
 	]);
 
 Route::post('auth/login', [
-	'uses'=> 'Auth\AuthController@getLogin',
+	'uses'=> 'Auth\AuthController@postLogin',
 	'as' => 'login'
 	]);
 
@@ -43,3 +43,10 @@ Route::post('auth/signup', [
 	'uses'=> 'Auth\AuthController@postSignup',
 	'as' => 'signup'
 	]);
+
+ //salir
+Route::get('auth/logout', [
+	'uses'=> 'Auth\AuthController@getLogout',
+	'as' => 'logout'
+	]);
+

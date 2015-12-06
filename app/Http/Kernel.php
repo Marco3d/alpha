@@ -29,5 +29,9 @@ class Kernel extends HttpKernel
         'auth' => \App\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
+
+        //agregado por mi para que el usuario al desloguearse no lo dirija al formulario login
+        'auth.strict' => \App\Http\Middleware\RedirectIfNoAuthenticated::class,
+
     ];
 }
