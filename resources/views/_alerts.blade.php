@@ -1,4 +1,5 @@
-@if ( Session::has('alert'))
+@if ( Session::has('alert') && (count(Session::get('alert'))>0))  {{-- elimina espacio del div alert --}}
+
 
   <div class="content-alerts">
     <div class="container">

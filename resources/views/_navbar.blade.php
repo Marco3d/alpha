@@ -9,7 +9,7 @@
  				<span class="icon-bar"></span>
  				<span class="icon-bar"></span>
  			</button>
- 			<a class="navbar-brand" href="#">{{$app_name}}</a>
+ 			<a class="navbar-brand" href="{{URL::route('home')}}">{{$app_name}}</a>
  		</div>
 
  		<!-- Collect the nav links, forms, and other content for toggling -->

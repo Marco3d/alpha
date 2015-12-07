@@ -1,8 +1,31 @@
+//core
+
+$body-bg:	  #f1f1f1;
+
+
+//branding
+$brand-primary:         #3498DB;
+
+
 //navbar
 
-$navbar-default-color:             #777 ;
-$navbar-default-bg:                #f8f8f8 ;
+$navbar-default-color:             #ddd ;
+$navbar-default-bg:                #444 ;
 $navbar-default-border:            darken($navbar-default-bg, 6.5%) ;
+
+// Navbar links
+$navbar-default-link-color:                $navbar-default-color;
+$navbar-default-link-hover-color:          lighten($navbar-default-link-color, 10%) ;
+$navbar-default-link-hover-bg:             transparent;
+$navbar-default-link-active-color:         $navbar-default-link-hover-color;
+$navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%) !default;
+$navbar-default-link-disabled-color:       #ccc !default;
+$navbar-default-link-disabled-bg:          transparent !default;
+
+// Navbar brand label
+$navbar-default-brand-color:               #fff;
+$navbar-default-brand-hover-color:         $navbar-default-brand-color;
+$navbar-default-brand-hover-bg:            transparent;
 
 //content
 
