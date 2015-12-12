@@ -95,6 +95,44 @@ class UserRequest extends Request
            ];
        }
 
+
+       elseif ( $currentRoute == 'password_reset_request') {
+           $rules = [
+           
+             'email' => [
+                'required',
+                'email',
+                'exists:users,email,deleted_at,NULL',
+            
+
+             ],
+        
+            
+
+           ];
+       }
+
+        elseif ( $currentRoute == 'password_reset') {
+           $rules = [
+           
+            'password' => [
+                'required',
+
+               'min:' .Config::get('user.password_min_length'),
+               'max:' .Config::get('user.password_max_length'),
+               'confirmed',
+
+             ],
+        
+            
+
+           ];
+       }
+
+
+
+
+
        return $rules;
     }
 

@@ -13,6 +13,8 @@
 				  </div>
 				  <div class="panel-body">
 
+				  @include('errors._form_with_error_alert')
+
 				    {!! Form::open(['url' => URL::route('signup'), 'autocomplete' => 'off']) !!}
 
 				    <div class="form-group {{$errors->has('name')? 'has-error' : ""}}">

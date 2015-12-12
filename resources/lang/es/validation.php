@@ -77,6 +77,10 @@ return [
     'unique'               => ':attribute ya ha sido registrado.',
     'url'                  => 'El formato :attribute es inválido.',
 
+    //mis mensajes agregados
+
+    'generic'              => 'Hay algún problema,revisa los datos que has ingresado',
+
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Language Lines

@@ -50,3 +50,28 @@ Route::get('auth/logout', [
 	'as' => 'logout'
 	]);
 
+ //password reset request
+
+Route::get('auth/password_reset/request', [
+	'uses'=> 'Auth\PasswordController@getResetRequest',
+	'as' => 'password_reset_request'
+	]);
+
+Route::post('auth/password_reset/request', [
+	'uses'=> 'Auth\PasswordController@postResetRequest',
+	'as' => 'password_reset_request'
+	]);
+
+
+
+//password reset
+
+Route::get('auth/password_reset/{user_email}/{password_reset_token}', [
+	'uses'=> 'Auth\PasswordController@getReset',
+	'as' => 'password_reset'
+	]);
+
+Route::post('auth/password_reset/{user_email}/{password_reset_token}', [
+	'uses'=> 'Auth\PasswordController@postReset',
+	'as' => 'password_reset'
+	]);

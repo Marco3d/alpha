@@ -1,6 +1,6 @@
  <!-- menu nav -->    
 <nav class = "navbar navbar-default navbar-fixed-top">
- 	<div class="container-fluid">
+ 	<div class="container">
  		<!-- Brand and toggle get grouped for better mobile display -->
  		<div class="navbar-header">
  			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -19,7 +19,7 @@
  			<ul class="nav navbar-nav navbar-right">
  			@if (Auth::guest())
  			 <li><a href="{{URL::route('login')}}">{{ Lang::get('navbar.login_btn')}}</a></li>
- 		      <li><a href="{{URL::route('signup')}}">{{ Lang::get('navbar.signup_btn')}}</a></li>
+ 		      <li><a class= "navbar-btn btn btn-primary" href="{{URL::route('signup')}}">{{ Lang::get('navbar.signup_btn')}}</a></li>
  		      @else
 
  		      <li class="dropdown">

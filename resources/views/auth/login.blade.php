@@ -13,6 +13,8 @@
 				  </div>
 				  <div class="panel-body">
 
+				  @include('errors._form_with_error_alert')
+
 				    {!! Form::open(['url' => URL::route('login'), 'autocomplete' => 'off']) !!}
 		    			   
 
@@ -67,6 +69,7 @@
 
 				    <div class="div form-group">
 				    	{!!Form::submit(Lang::get('auth.login_btn'),['class'=>'btn btn-primary'])!!}
+				    	<a href="{{ URL::route('password_reset_request') }}" class ="btn btn-link">{{Lang::get('auth.reset_password_call_to_action')}}</a>
 				    </div>
 
 				    

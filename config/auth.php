@@ -58,10 +58,18 @@ return [
     |
     */
 
-    'password' => [
+    /*'password' => [
         'email' => 'emails.password',
         'table' => 'password_resets',
         'expire' => 60,
+    ],*/
+
+    'password_reset_token' => [
+        'lenght' => 40,
+        'expire_in' => 60,
     ],
+
+
+
 
 ];
