@@ -69,8 +69,8 @@ return [
          ///////buttons
 
          'signup_btn'                              => 'Crear mi cuenta', 
-         'login_btn'                               =>  'Ingresar a mi cuenta', 
-         'password_reset_btn'                      =>  'Enviar',  
+         'login_btn'                               => 'Ingresar a mi cuenta', 
+         'password_reset_btn'                      => 'Enviar',  
 
          ///////
          //call to action
