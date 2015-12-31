@@ -32,7 +32,7 @@ return [
          //Form Fields
 
         'signup_name'                             => 'Nombre',
-        'signup_name_placeholder'                 => 'Ingresa tu  nombre',
+        'signup_name_placeholder'                 => 'Ingresa tu nombre completo',
 
         'signup_username'                         => 'Nombre de usuario',
         'signup_username_placeholder'             => 'Ingresa tu  nombre de usuario',
